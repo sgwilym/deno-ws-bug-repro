@@ -57,3 +57,18 @@ Bytes received
 ```
 
 The server only receives the first four messages, stopping at exactly 256kb.
+
+Sometimes it even logs messages like this:
+
+```
+received 65536 c0afd51b806b4fdf815b017409bf95d0584b2a9d91d54935b97ded16078061c1
+received 65536 b3d8f877ae3dd36aa49b6da898f8895707c2a67f67468b0db9adbfa7df65c3a9
+received 65536 dd8645a7fa54da76a950737e9421e61d70377457ffddc2b94ab52b0bdea45672
+Bytes received
+196608
+received 65536 98a8964fc7f5089cf9996c1c90b2cf5e102cfcefcef832cd0bb7145305fbfc3e
+```
+
+Where a message is received _after_ the socket is closed.
+
+This bug is present in version 1.29.0 - 1.29.2 of Deno.
