@@ -7,6 +7,10 @@ serve((req) => {
 
   socket.binaryType = "arraybuffer";
 
+  socket.onerror = (err) => {
+    console.log(err);
+  };
+
   socket.onmessage = async (event) => {
     const bytes = new Uint8Array(event.data);
     const hash = await crypto.subtle.digest("SHA-256", bytes);

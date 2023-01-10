@@ -13,6 +13,10 @@ socket.onopen = () => {
   socketReady.resolve();
 };
 
+socket.onerror = (err) => {
+  console.log(err);
+};
+
 await socketReady;
 
 let bytesSent = 0;
