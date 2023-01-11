@@ -10,6 +10,8 @@ WebSocket, and logs the size of the messages sent.
 websocket message, logs the size. When the Websocket connection is closed, it
 logs the total amount of bytes received.
 
+**Deno sends the wrong number of messages from versions 1.27.0 - 1.29.2.**
+
 When run locally, each script logs the following:
 
 client.ts:
@@ -89,3 +91,6 @@ received 10431 b1d0505d6f830262f2a0ca58905194483f118abc765bc91c6093cccdef0ba5ea
 Bytes received
 	534719
 ```
+
+If you run the client script using Deno 1.26.2, the server receives all messages
+regardless of which version of Deno it is using.
