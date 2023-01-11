@@ -46,8 +46,9 @@ Bytes received
 
 Which is as expected.
 
-However, when this server is deployed to Fly.io, the server reports the
-following:
+However, when this server is deployed to Fly.io or Deno Deploy
+([playground for server here](https://dash.deno.com/playground/useful-dog-20)),
+the server reports the following:
 
 ```
 received 65536 c0afd51b806b4fdf815b017409bf95d0584b2a9d91d54935b97ded16078061c1

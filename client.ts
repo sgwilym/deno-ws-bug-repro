@@ -1,7 +1,8 @@
 import { deferred } from "https://deno.land/std@0.170.0/async/deferred.ts";
 
 //const socket = new WebSocket("ws://localhost:8000");
-const socket = new WebSocket("wss://ws-deno-repro.fly.dev/");
+//const socket = new WebSocket("wss://ws-deno-repro.fly.dev/");
+const socket = new WebSocket("wss://useful-dog-20.deno.dev");
 
 console.log(socket.extensions);
 
